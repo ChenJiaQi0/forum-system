@@ -1,0 +1,26 @@
+server:
+  port: 8000
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route-user
+          uri: http://127.0.0.1:8001
+          predicates:
+            - Path=/user/**
+        - id: route-post
+          uri: http://127.0.0.1:8002
+          predicates:
+            - Path=/post/**
+        - id: route-comment
+          uri: http://127.0.0.1:8003
+          predicates:
+            - Path=/comment/**
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        heart-beat-interval: 5000
+        heart-beat-timeout: 15000
+        namespace: dev
+  application:
+    name: forum-gateway

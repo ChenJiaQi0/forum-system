@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: forum-comment
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: dev
+        file-extension: yml
+        auto-refresh: true
+        bootstrap:
+          enable: true
