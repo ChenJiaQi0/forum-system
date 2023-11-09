@@ -1,0 +1,4 @@
+此项目使用了nacos注册中心和服务配置，使用了网关进行路由转发，Sentinel进行流控，AOP注解进行鉴权，接入knife4j
+添加数据库使用forum_system.sql
+启动nacos，在nacos里面配置 配置文件注释的内容
+启动sentinel，设置规则进行流控限流设置
